@@ -32,6 +32,10 @@ class ViewController : UIViewController,UITableViewDelegate,UITableViewDataSourc
         tableView.reloadData()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Title=Subject[indexPath.row]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

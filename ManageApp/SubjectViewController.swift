@@ -1,37 +1,29 @@
 //
-//  NewSubjectSettingViewController.swift
+//  SubjectViewController.swift
 //  ManageApp
 //
-//  Created by Tasuku Kubo on 2018/11/08.
+//  Created by Tasuku Kubo on 2018/11/10.
 //  Copyright © 2018 TasukuKubo. All rights reserved.
 //
 
 import UIKit
 
-var Subject = [String]()
-var Title = "title"
-class NewSubjectSettingViewController: UIViewController {
-   
-    @IBOutlet weak var TodoTextField: UITextField!
+class SubjectViewController: UIViewController {
 
-    @IBAction func TodoAddButtom(_ sender: Any) {
-        //変数に入力内容を入れる
-        Subject.append(TodoTextField.text!)
-        //追加ボタンを押したらフィールドを空にする
-        TodoTextField.text = ""
-        //変数の中身をUDに追加
-        UserDefaults.standard.set( Subject, forKey: "TodoList" )
-    }
-    
+    @IBOutlet weak var label: UILabel!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Title)
+        label.text=Title
+
         // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     /*
@@ -43,4 +35,5 @@ class NewSubjectSettingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }
