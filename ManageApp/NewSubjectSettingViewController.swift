@@ -17,6 +17,7 @@ class NewSubjectSettingViewController: UIViewController {
     @IBAction func TodoAddButtom(_ sender: Any) {
         //変数に入力内容を入れる
         Subject.append(TodoTextField.text!)
+        Title=TodoTextField.text!;
         //追加ボタンを押したらフィールドを空にする
         TodoTextField.text = ""
         //変数の中身をUDに追加
