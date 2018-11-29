@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import Charts
 var selected2:Int=0
 var Title2 = "title"
 //科目ごとの管理を行う
 class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
 
     @IBOutlet weak var label: UILabel!
     
@@ -43,11 +43,21 @@ class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewD
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             Title2=subjects[selected].ex[indexPath.row].name_e
             selected2=indexPath.row
+            /*
+            let cell = tableView.cellForRow(at:indexPath)
+            cell?.accessoryType = .checkmark
+            */
         }
+        // チェックマークを外す
+        /*
+        func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+            let cell = tableView.cellForRow(at:indexPath)
+            cell?.accessoryType = .none
+        }
+        */
         override func viewDidLoad() {
         super.viewDidLoad()
         label.text=Title
-        
         // Do any additional setup after loading the view.
         }
             // Do any additional setup after loading the view.
@@ -56,6 +66,8 @@ class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewD
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
+    
+        
         /*
          // MARK: - Navigation
          
