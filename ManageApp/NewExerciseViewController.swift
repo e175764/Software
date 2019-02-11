@@ -35,10 +35,15 @@ class NewExerciseViewController: UIViewController {
 }
 
     override func viewDidLoad() {
+        if subjects[selected].ex.count != 0{
+            ExTextField.text = subjects[selected].ex[selected2].name_e
+            DateTextField.text = subjects[selected].ex[selected2].date
+            DetailTextFiled.text = subjects[selected].ex[selected2].detail
+        }
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
+
     /*
     // MARK: - Navigation
 

@@ -29,7 +29,7 @@ class BaseCharts: UIViewController {
             }
         }
 
-        let chart=PieChartView(frame: CGRect(x: 0, y: 20, width: 300 , height: 300))
+        let chart=PieChartView(frame: CGRect(x: 30, y: 0, width: 300 , height: 300))
         // 2. generate chart data entries
         let track=["Done","Undone"]
         let money=[done,undone]
@@ -45,7 +45,7 @@ class BaseCharts: UIViewController {
         }
         
         // 図の設定を行う(色やラベル)
-        let set = PieChartDataSet( values: entries, label: "Pie Chart")
+        let set = PieChartDataSet( values: entries, label: "Exercise")
         // this is custom extension method. Download the code for more details.
         var colors: [UIColor] = []
         
@@ -66,7 +66,7 @@ class BaseCharts: UIViewController {
         let d = Description()
         d.text = "iOSCharts.io"
         chart.chartDescription = d
-        chart.centerText = "Pie Chart"
+        chart.centerText = "Exercise"
         chart.holeRadiusPercent = 0.2
         chart.transparentCircleColor = UIColor.clear
         self.view.addSubview(chart)
