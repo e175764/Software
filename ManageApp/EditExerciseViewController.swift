@@ -16,7 +16,7 @@ class EditExerciseViewController: UIViewController {
     
     @IBOutlet weak var DateTextField: UITextField!
     
-    @IBOutlet weak var DetailTextFiled: UITextField!
+    @IBOutlet weak var DetailTextField: UITextField!
     
     @IBAction func testUISwitch(sender: UISwitch) {
         if ( sender.isOn ){
@@ -31,25 +31,31 @@ class EditExerciseViewController: UIViewController {
         //   dateFormatter.dateFormat = "yyyy-MM-dd"
     subjects[selected].ex[selected2].name_e=ExTextField.text!
         
-    subjects[selected].ex[selected2].detail=DetailTextFiled.text!
+    subjects[selected].ex[selected2].detail=DetailTextField.text!
     subjects[selected].ex[selected2].date=DateTextField.text!
         
         
         //追加ボタンを押したらフィールドを空にする
         ExTextField.text = ""
         DateTextField.text = ""
-        DetailTextFiled.text = ""
+        DetailTextField.text = ""
     }
     
     
     override func viewDidLoad() {
             ExTextField.text = subjects[selected].ex[selected2].name_e
             DateTextField.text = subjects[selected].ex[selected2].date
-            DetailTextFiled.text = subjects[selected].ex[selected2].detail
+            DetailTextField.text = subjects[selected].ex[selected2].detail
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
+    func textFieldShouldReturn(_DetailTextField: UITextField) -> Bool {
+        ExTextField.resignFirstResponder()
+        DateTextField.resignFirstResponder()
+        DetailTextField.resignFirstResponder()
+        return true
+    }
     /*
      // MARK: - Navigation
      

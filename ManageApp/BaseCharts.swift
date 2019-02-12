@@ -49,13 +49,18 @@ class BaseCharts: UIViewController {
         // this is custom extension method. Download the code for more details.
         var colors: [UIColor] = []
         
-        for _ in 0..<money.count {
-            let red = Double(arc4random_uniform(256))
-            let green = Double(arc4random_uniform(256))
-            let blue = Double(arc4random_uniform(256))
-            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-            colors.append(color)
-        }
+        var red = Double(73)
+        var green = Double(6)
+        var blue = Double(248)
+        var color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+        colors.append(color)
+
+        red = Double(249)
+        green = Double(37)
+        blue = Double(0)
+        color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+        colors.append(color)
+        
         set.colors = colors
         let data = PieChartData(dataSet: set)
         chart.data = data
