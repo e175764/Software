@@ -16,18 +16,18 @@ class NewExerciseViewController: UIViewController {
     
     @IBOutlet weak var DateTextField: UITextField!
     
-    @IBOutlet weak var DetailTextFiled: UITextField!
+    @IBOutlet weak var DetailTextField: UITextView!
     
     
     @IBAction func ExAddButton(_ sender: Any) {
     //   dateFormatter.dateFormat = "yyyy-MM-dd"
     
-    subjects[selected].ex.append(Exercise(name_e: ExTextField.text!,detail:DetailTextFiled.text!,fin:false, date:DateTextField.text!))
+    subjects[selected].ex.append(Exercise(name_e: ExTextField.text!,detail:DetailTextField.text!,fin:false, date:DateTextField.text!))
     
     //追加ボタンを押したらフィールドを空にする
     ExTextField.text = ""
     DateTextField.text = ""
-    DetailTextFiled.text = ""
+    DetailTextField.text = ""
     //変数の中身をUDに追加:アプリ終了後の値の保持
     /*
      userDefault.archive(key: "Subject",value: subjects.count])
@@ -38,7 +38,7 @@ class NewExerciseViewController: UIViewController {
         if subjects[selected].ex.count != 0{
             ExTextField.text = subjects[selected].ex[selected2].name_e
             DateTextField.text = subjects[selected].ex[selected2].date
-            DetailTextFiled.text = subjects[selected].ex[selected2].detail
+            DetailTextField.text = subjects[selected].ex[selected2].detail
         }
         super.viewDidLoad()
         // Do any additional setup after loading the view.

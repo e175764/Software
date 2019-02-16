@@ -16,7 +16,7 @@ class EditExerciseViewController: UIViewController {
     
     @IBOutlet weak var DateTextField: UITextField!
     
-    @IBOutlet weak var DetailTextField: UITextField!
+    @IBOutlet weak var DetailTextField: UITextView!
     
     @IBAction func testUISwitch(sender: UISwitch) {
         if ( sender.isOn ){

@@ -279,20 +279,21 @@
                                     <segue destination="nvH-wo-WfN" kind="modal" id="Afd-DZ-tlP"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fND-fj-7YF">
-                                <rect key="frame" x="30" y="271" width="314" height="227"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hgn-f8-i1K">
+                                <rect key="frame" x="49" y="271" width="295" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6ow-H7-4ac"/>
                     </view>
                     <connections>
                         <outlet property="DateTextField" destination="Z9R-W7-GKN" id="ywB-RG-Qfp"/>
-                        <outlet property="DetailTextFiled" destination="fND-fj-7YF" id="6a9-yt-agp"/>
+                        <outlet property="DetailTextField" destination="hgn-f8-i1K" id="naR-mz-GI2"/>
                         <outlet property="ExTextField" destination="Dpv-mv-hRW" id="t0f-dM-aBv"/>
                     </connections>
                 </viewController>
@@ -343,13 +344,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mps-VL-1Qd">
-                                <rect key="frame" x="49" y="244" width="276" height="191"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k5Y-9L-FpA">
                                 <rect key="frame" x="279" y="191" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -358,21 +352,29 @@
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oa-3G-pmm">
-                                <rect key="frame" x="164" y="443" width="46" height="30"/>
+                                <rect key="frame" x="170" y="443" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="ExEditButton:" destination="u05-DM-LDe" eventType="touchUpInside" id="8BD-uh-McH"/>
                                     <segue destination="gIm-H3-mNE" kind="show" id="0EQ-Gh-2Uw"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rmt-uR-yom">
+                                <rect key="frame" x="50" y="255" width="276" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gnU-93-RWX"/>
                     </view>
                     <connections>
                         <outlet property="DateTextField" destination="qXT-Wb-prk" id="Zap-KI-2eI"/>
-                        <outlet property="DetailTextField" destination="mps-VL-1Qd" id="to6-CN-nIm"/>
+                        <outlet property="DetailTextField" destination="Rmt-uR-yom" id="CYQ-lX-8ln"/>
                         <outlet property="ExTextField" destination="S7e-Md-7GI" id="s8W-CW-Igb"/>
                     </connections>
                 </viewController>
@@ -401,7 +403,6 @@
         <!--Base Charts-->
         <scene sceneID="lpP-9O-7hT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XKG-N0-lS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="i7p-aa-SpM" customClass="BaseCharts" customModule="ManageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AkW-m0-gYj">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="215"/>
@@ -410,6 +411,7 @@
                         <viewLayoutGuide key="safeArea" id="zPn-Zm-n8x"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKG-N0-lS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2447" y="2157"/>
         </scene>
@@ -485,9 +487,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eQ-HG-eEj">
-                                <rect key="frame" x="298" y="61" width="46" height="30"/>
+                                <rect key="frame" x="304" y="61" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="ExAddButton:" destination="cX7-JY-YJ5" eventType="touchUpInside" id="FTq-QN-CG4"/>
                                 </connections>
